@@ -9,13 +9,13 @@ function App() {
   const [username, setUsername] = useState("");
 
   useEffect(() => {
-    Axios.get("http://localhost:3001/getUsers").then((response) => {
+    Axios.get("https://mern-learn-imp6.onrender.com/getUsers").then((response) => {
       setListOfUsers(response.data);
     });
   }, []);
 
   const createUser = () => {
-    Axios.post("http://localhost:3001/createUser", {
+    Axios.post("https://mern-learn-imp6.onrender.com/createUser", {
       name,
       age,
       username,
